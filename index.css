@@ -79,23 +79,47 @@ header h1 {
 }
 
 
-.header_links button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    transition: 0.3s;
-    padding-left: 30px;
-    padding-right: 40px;
-    cursor: pointer;
-}
-
-.header_links button:hover {
-    text-underline-offset: 10px;
-    text-decoration: underline;
-}
-
 .headerlogo {
     height: 100px;
     width: 100px;
     cursor: pointer;
 }
+
+.container{
+    border: 1px solid #cccfdb;
+    border-radius: 2px;
+ } 
+ .header_links button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    transition: 0.3s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 30px;
+    margin-right: 40px;
+    cursor: pointer;
+   display: inline-block;
+   position: relative;
+ }
+ 
+ .header_links button:after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 2px;
+   bottom: -5px;
+   left: 0;
+   background-color: 
+ #0087ca;
+   transform-origin: bottom right;
+   transition: transform 0.25s ease-out;
+ }
+ 
+ .header_links button:hover:after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+ }
